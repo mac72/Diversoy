@@ -1,0 +1,152 @@
+body
+	font-family: Arial, Helvetica, sans-serif
+	font-size: 1em
+	color #fff
+.clearfix
+	*zoom 1
+	&:before, &:after
+		content ""
+		display: block
+	&:after
+		clear: both
+
+	
+.container
+	width 960px
+	margin 0 auto
+	height auto
+	line-height: 180%
+	p 
+		color gray
+
+/*|menu de navegacion*/
+.menu
+	height: 40px
+	width: 100%
+	background-color: #455858
+	font-weight: bold
+	border-bottom: 7px solid #e84b37
+	ul
+		
+		padding 0
+		height: 40px
+		width: 600px
+	li
+		height: 40px
+		display: inline
+		float left
+		background-color: #455868
+		&:last-child a 
+			border-right: 0
+	a 
+		height: 40px
+		border-right: 1px solid #576979
+		display inline-block
+		width: 100px
+		text-align: center
+		text-decoration: none
+		line-height: 40px
+		text-shadow: 1px 1px 0px #283744
+		box-sizing: border-box
+		color #fff
+		&:hover, &:active
+			background-color: #e74c3c
+	.pull
+		display: none
+
+.col-1, .col-2
+	box-sizing: border-box
+	padding: 1em
+	//display: inline-block
+	//vertical-align top
+	
+.col-1
+	width: 50%
+	background-color: #2ecc71
+	float left
+	
+.col-2
+	width 40%
+	background-color: #e74c3c
+	float right
+#slideshow .slide img
+	width: 100%
+	height: auto
+	
+	
+@media screen and (max-width 480px)
+	.container
+		width 90%
+	.col-1, .col-2
+		width 100%
+		float none
+	.menu
+		border-bottom: 0
+		height: auto
+		ul
+			display: none
+			height: auto
+			width: 100%
+		li
+			width: 50%
+			float left
+			position: relative
+		a 
+			width: 100%
+		a.pull
+			display: block
+			background-color: #283744
+			width: 100%
+			position: relative
+			text-align: left
+			text-indent: 1.5em
+			&:after
+				content ""
+				background: url("../img/nav-icon.png") no-repeat
+				width: 30px
+				height:  30px
+				display: inline-block
+				position: absolute
+				right 15px
+				top 10px
+		
+					
+			
+			
+@media screen and (min-width 481px) and (max-width 767px)
+	.container
+		width 90%
+	.col-1, .col-2
+		width 100%
+		float none
+	.menu
+		height: auto
+		ul
+			width: 100%
+			display: block
+			height: auto
+		li
+			width: 50%
+			float left
+			position: relative
+		a
+			width: 100%
+			text-align: left
+			text-indent: 1.5em
+			border-bottom: 1px solid #576979
+			border-right: 1px solid #576979
+			
+@media screen and (min-width 768px) and (max-width 1024px)
+	.container
+		width 85%
+	
+
+
+		
+		
+	
+	
+
+  
+ 
+	

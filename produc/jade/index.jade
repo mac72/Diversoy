@@ -1,0 +1,53 @@
+doctype html
+html(lan="es")
+	head
+		title Curso Diseño Web
+		meta(charset="utf-8")
+		meta(name="description" content="Curso de diseño web responsive con HTML5")
+		meta(author="" content="M@c Segovia - Soluciones Informaticas")
+		meta(
+					viewport="viewport" 
+					content="width=device-width, initial-scale=1.0")
+		link(rel="icon" href="favicon.ico")
+		link(rel="stylesheet" href="css/style.css" media="screen")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+		script(src="js/modernizr-respond-min.js")
+		script(src="js/jquery.carouFredSel-5.5.2.js")
+
+	body
+		header
+			.container
+				img(src="img/logo.jpg" alt="logo")
+
+		nav.menu
+			ul.clearfix.container
+				each val in ["Inicio","Servicios", "Nosotros","Diseño","Blog", "Contacto"]
+					li: a(href='#')=val
+			a.pull(href='#') Menú
+		
+		//slider
+		section#slideshow
+			#slider
+				.slide: img(src="img/slideshow/sliderimage1.jpg"  alt="paisaje")
+				.slide: img(src="img/slideshow/sliderimage2.jpg"  alt="paisaje")
+				.slide: img(src="img/slideshow/sliderimage3.jpg"  alt="paisaje")
+
+		.container
+			h2 Lorem ipsum web
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, perferendis, ea itaque eveniet aliquid beatae qui! Consequuntur, non, illum voluptatum optio eius autem provident animi ex magnam quaerat voluptas ea? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore culpa illo dolorum dolor nulla sunt dolorem. Obcaecati, qui, harum, ipsum reiciendis eos alias distinctio porro rerum laudantium blanditiis dolores in?
+			br
+			.col-1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cumque nemo debitis in ipsam adipisci incidunt. Nemo, mollitia, libero, officia doloribus pariatur quibusdam ullam aut ex voluptates fuga voluptate nam! 
+			.col-2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, perspiciatis, tenetur quod vel asperiores unde animi eos illum cum assumenda atque ex simi 
+
+			.clearfix
+			hr
+			br
+			include portafolio.jade
+
+			script(src="js/miJS.js")
+
+		
+	
+
+
+		
