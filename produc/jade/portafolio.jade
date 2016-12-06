@@ -1,8 +1,30 @@
 //portafolio
--var values = ["app","card", "icon","logo","web"]
+-var objPortafolio = [{cat: "app", filter: "App"},{cat : "card", filter: "Bussines card"}, {cat: "icon", filter: "Icon"}, {cat: "logo", filter: "Logo"}, {cat: "web", filter: "Web design"} ]
+-var app = ["Visual Infography", "Graph Plotting", "Weatherette"]
+-var card = ["Typography Company", "QR Quick Response", "Reality", "BMF", "Techlion"]
+-var icon =  ["Instagram", "Scoccer", "Sandwich", "Domino's Pizza", "Bird Document"]
+-var logo = ["KittyPic", "Speciallisterne", "Native Designers", "Bookworm", "3D Map", "Mobi Sock", "Village Community Church"]
+-var web =  ["Note", "Student Guide", "Backend Admin", "Sonor's Design"]
+mixin portafolio(catalogo, n)
+	each val, index in catalogo
+		.portafolio(class= objPortafolio[n].cat data-cat= objPortafolio[n].cat)
+			.protafolio-wrapper
+				img(src= "img/portfolios/"+objPortafolio[n].cat+"/"+(index+1) +".jpg" alt= objPortafolio[n].cat)
+				.label
+					.label-text
+						a.text-title(href="#") #{val}
+						span.text-category= objPortafolio[n].filter
+					.label-bg
 
 ul#filters.clearfix
 	li: span.filter.active(
-		data-filter= values[0] + " " + values[1] + " " + values[2] + " " + values[3] + " " + values[4]) Todos
-	each val, index in values
-		li: span.filter(data-filter= val)= val
+		data-filter= objPortafolio[0].cat  + " " + objPortafolio[1].cat  + " " + objPortafolio[2].cat  + " " + objPortafolio[3].cat  + " " + objPortafolio[4].cat ) Todos
+	each val, index in objPortafolio
+		li: span.filter(data-filter= val.cat)= objPortafolio[index].filter
+.portafoliolist
+
+	+portafolio(app, 0)
+	+portafolio(card, 1)
+	+portafolio(icon, 2)
+	+portafolio(logo, 3)
+	+portafolio(web, 4)
